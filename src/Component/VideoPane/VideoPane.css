@@ -1,0 +1,19 @@
+.positionPanel{
+    display:flex
+}
+.joiningText{
+    font-size: 2.5em;
+}
+@media only screen and (max-width:1200px){
+
+    .positionPanel{
+        display:none;
+    }
+    .joiningText{
+        font-size:28px;
+    }
+    .joinUstag{
+        padding-bottom:20%
+
+    }
+}

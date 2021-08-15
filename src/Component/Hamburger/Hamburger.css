@@ -1,0 +1,90 @@
+.hamburger{
+    position:fixed;
+    top:7%;
+    right:5%;
+    height:35px;
+    width:20px;
+    z-index:100;
+    cursor:pointer;
+}
+.bar1{
+    width:100%;
+    height:2px;
+    background-color: black;
+    position: absolute;
+    top: 40%;
+}
+.bar2{
+    width:100%;
+    height:2px;
+    background-color: black;
+    position: absolute;
+    top: 60%;
+}
+.dropdownMenu{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    z-index:50;
+    background-color: white;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.dropdownContainer{
+    column-gap:5%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+}
+.ddInner{
+    display:flex;
+    width:80%;
+    margin: auto;
+    margin-top: 5%;
+}
+.dropdownLinks{
+    display: grid;
+    grid-template-columns:auto auto;
+    width:50%;
+    height:40vh;
+}
+.dropdownLinks div{
+    font-size: 3.5em;
+    font-family: "IBM Plex Serif";
+}
+.dropdownLists{
+    width:50%;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.dropdownLists ul{
+    list-style-type:none;
+    padding:1em;
+    font-family: 'Roboto';
+}
+.dropdownLists ul label{
+    color: grey;
+    padding: 0.5em;
+    padding-bottom: 4em;
+
+}
+.dropdownLists ul li {
+    padding: 0.5em;
+}
+@media only screen and (max-width:1200px){
+    .dropdownLinks div{
+        font-size:2em;
+    }
+    .ddInner{
+        flex-direction: column;
+        margin-top: 20%;
+    }
+    .dropdownLinks, .dropdownLists{
+        width:100%
+    }
+}

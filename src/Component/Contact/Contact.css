@@ -1,0 +1,65 @@
+.contactContainer{
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+}
+.slidingButton{
+    position:relative;
+    font-weight:bold;
+    font-family: 'Roboto';
+    margin-top: 15%;
+}
+.sublinks{
+    display:flex;
+    justify-content:space-between;
+    width:50%
+}
+.contactList{
+    list-style-type:none;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+.contactList li{
+    padding:5px;
+    margin:5px;
+    color:grey;
+    font-weight:bold;
+    cursor:pointer;
+    position:relative;
+    transition: padding 0.5s ease;
+
+}
+.contactList li::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: rgba(156, 156, 156, 0.5);
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.contactList li:hover::before{
+    transform: scaleX(1);
+}
+.statementText{
+    font-size:3em;
+}
+@media only screen and (max-width: 1200px){
+    .contactContainer{
+        flex-direction: column;
+    }
+    .countryList{
+        display:none;
+    }
+    .sublinks{
+        width:100%;
+        padding-top: 10%;
+    }
+    .statementText{
+        font-size:2em;
+    }
+}

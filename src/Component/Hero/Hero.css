@@ -1,0 +1,97 @@
+.heroContainer{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10%;
+    z-index:5;
+}
+.heroContainer .muted-text{
+    font-family: Roboto;
+    font-size: 12px;
+    color: grey;
+    font-weight: 700;
+}
+.heroContainer .mainText{
+    font-family: 'IBM Plex Serif';
+    font-size: 3.5em;
+    color:grey;
+    margin-top: 5%;
+}
+.muted-text{
+    cursor: pointer;
+}
+.muted-text .icon{
+    margin-top: 1%;
+    transition: all 0.4s ease;
+}
+.muted-text .text{
+    width: fit-content;
+    padding:6px;
+    position: relative;
+
+}
+.muted-text .text::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgb(170, 170, 170, 0.5);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.3s ease;
+}
+
+.muted-text:hover .icon{
+    margin-top: 2.5%;
+}
+.text:hover::after{
+    transform: scaleX(1);
+
+
+}
+.mainText{
+    line-height: 1em;
+    width: fit-content;
+}
+.mobile{
+    display:none;
+}
+.pone, .ptwo, .pthree{
+    position:relative;
+}
+.pone::after, .ptwo::after, .pthree::after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:2px;
+    background-color:rgba(24, 24, 24, 0.151);
+    transform-origin: right;
+    transition: transform 0.4s ease-in;
+    transform: scaleX(0);
+}
+.ptwo::after{
+    transition-delay: 0.2s;
+}
+.pthree::after{
+    transition-delay: 0.4s;
+}
+.mainText:hover .pone::after, .mainText:hover .ptwo::after, .mainText:hover .pthree::after{
+
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+@media only screen and (max-width:1200px){
+    .heroContainer .mainText{
+        font-size:32px;
+    }
+    .laptop{
+        display:none;
+    }
+    .mobile{
+        display: block;
+    }
+}

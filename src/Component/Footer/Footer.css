@@ -1,0 +1,18 @@
+.wrapOnMobile{
+    display: flex;
+    justify-content: space-around;
+    font-size: 21px;
+    color:grey;
+    flex:1
+}
+@media only screen and (max-width:1200px){
+    .wrapOnMobile{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap:20%;
+        column-gap: 20%;
+    }
+    .privacyPane{
+        display:none
+    }
+}

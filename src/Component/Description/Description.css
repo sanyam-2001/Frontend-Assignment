@@ -1,0 +1,47 @@
+.mainDescPanel{
+    padding-top: 10%;
+}
+.descText{
+    width:50%;
+    margin: auto;
+    font-size: 2rem;
+    color:rgb(37, 37, 37);
+    font-family: 'IBM Plex Serif';
+    text-align: center;
+}
+.emptyFlex{
+    display:flex;
+    align-items: center;
+}
+.emptyFlex div{
+    width:50%;
+    height:30vh;
+}
+.baseTextContainer{
+    position:absolute;
+}
+.baseText{
+    position: absolute;
+    bottom:0;
+    left:5%;
+    font-family: 'IBM Plex Serif';
+    font-size: 2rem;
+}
+@media only screen and (max-width:1200px){
+    .descText{
+        font-size:21px;
+        width:80%
+    }
+    .baseText{
+        font-size:1rem
+    }
+    .secondEmpty{
+        padding-bottom: 10%;
+    }
+    .emptyFlex div{
+        height:15vh
+    }
+    .mainDescPanel{
+        padding-top: 50%;
+    }
+}

@@ -1,0 +1,11 @@
+.projectsContainer{
+    padding-top: 2.5%;
+    display:grid;
+    grid-template-columns: auto auto;
+    width:80%;
+    margin: auto;
+    column-gap:5%;
+    row-gap:1%;
+    padding-bottom: 40vh;
+
+}
